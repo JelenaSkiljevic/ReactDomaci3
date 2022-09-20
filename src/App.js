@@ -2,9 +2,13 @@ import './App.css';
 import { Main } from './components/Main';
 import Products from './components/Products';
 import NavBar from './components/NavBar';
+import Cart from './components/Cart';
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
+  const [cartNum, setCartNum] = useState(0);
+  const [cartProducts, setCartProducts] = useState([]);
    const [products, setProducts] = useState([
       {
       id: 1,
@@ -104,11 +108,65 @@ function App() {
     }
 
   ]);
+
+  function refreshCart() {
+    let newProducts = products.filter((product) => product.amount > 0);
+    setCartProducts(newProducts);
+  }
+  function addToCart(id) {
+    setCartNum(cartNum + 1);
+    products.forEach((product) => {
+      if (product.id === id) {
+        product.amount++;
+      }
+    });
+    refreshCart();
+  }
+  function removeFromCart(id) {
+    products.forEach((product) => {
+      if (product.id === id) {
+        if (product.amount > 0) {
+          product.amount--;
+          setCartNum(cartNum - 1);
+        }
+      }
+    });
+    refreshCart();
+  }
+
   return (
-    <div className="App">
-      <NavBar />
-        <Products products={products} />
-    </div>
+    <BrowserRouter className="App">
+      <Routes>
+        <Route
+        path="/"
+        element={
+          <Main/>
+        }
+        />
+        <Route
+        path="/products"
+        element={
+          <>
+        <NavBar cartNum={cartNum}></NavBar>
+        <Products
+          products={products} 
+          onAdd={addToCart}  
+          onRemove={removeFromCart}/>
+          </>
+          }
+        />
+        <Route 
+        path="/cart" element={
+          <>
+        <NavBar cartNum={cartNum}></NavBar>
+        <Cart 
+        products={cartProducts}
+        onAdd={addToCart} 
+        onRemove={removeFromCart}/>
+        </>}
+        />
+      </Routes>
+    </BrowserRouter>
   );
   }
 
