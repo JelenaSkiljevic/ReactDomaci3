@@ -16,7 +16,8 @@ function App() {
       title: "Bilar Original",
       description:
            " Ahlgrens",
-        price:"455,00",
+        price:155,
+        amount: 0,
     },
     {
       id: 2,
@@ -24,7 +25,8 @@ function App() {
       title: "Gott Blandat Salt",
       description:
              "Malaco",
-     price:"455,00",
+             price:155,
+     amount: 0,
     },
     {
       id: 3,
@@ -32,7 +34,8 @@ function App() {
       title: "Djungelvral Original",
       description:
           "Malaco",
-        price:"455,00",
+          price:155,
+        amount: 0,
     },
      {
       id: 4,
@@ -40,7 +43,8 @@ function App() {
       title: "Gott Blandat Original",
       description:
           "Malaco",
-        price:"455,00",
+          price:155,
+        amount: 0,
     },
       {
       id: 5,
@@ -48,7 +52,8 @@ function App() {
       title: "Sousikit",
       description:
         "  Malaco",
-        price:"455,00",
+        price:155,
+        amount: 0,
     },
       {
       id: 6,
@@ -56,7 +61,8 @@ function App() {
       title: "SKALLE",
       description:
         "  Bubs Godis",
-        price:"455,00",
+        price:155,
+        amount: 0,
     },
      {
       id: 7,
@@ -64,7 +70,8 @@ function App() {
       title: "Dracula Piller",
       description:
            " Salmiak",
-        price:"455,00",
+           price:155,
+        amount: 0,
     },
     {
       id: 8,
@@ -72,7 +79,8 @@ function App() {
       title: "Super Sura 2000",
       description:
              "Dragster",
-     price:"455,00",
+             price:155,
+     amount: 0,
     },
     {
       id: 9,
@@ -80,7 +88,8 @@ function App() {
       title: "Super Salta 3000",
       description:
           "Dragster",
-        price:"455,00",
+          price:155,
+        amount: 0,
     },
      {
       id: 10,
@@ -88,7 +97,8 @@ function App() {
       title: "Zoo original",
       description:
           "Malaco",
-        price:"455,00",
+          price:155,
+        amount: 0,
     },
       {
       id: 11,
@@ -96,7 +106,8 @@ function App() {
       title: "Sur SKALLE ",
       description:
         "  Bubs Godis",
-        price:"455,00",
+        price:155,
+        amount: 0,
     },
       {
       id: 12,
@@ -104,7 +115,8 @@ function App() {
       title: "Fizzypop",
       description:
         "  Malaco",
-        price:"455,00",
+        price:155,
+        amount: 0,
     }
 
   ]);

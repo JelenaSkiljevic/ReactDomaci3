@@ -1,5 +1,6 @@
 import React from "react";
 import OneProduct from "./OneProduct";
+import { Link } from "react-router-dom";
 
 function Cart({ products, onAdd, onRemove }) {
   let total = 0;
@@ -19,12 +20,13 @@ function Cart({ products, onAdd, onRemove }) {
               />
             )
           )
-        )}  
+        )}
       </div>
       {total === 0 ? (
     <div className="empty">
       <h2>Vaša korpa je prazna.</h2> 
-      <h3>Vratite se u prodavnicu.</h3>
+
+      <Link to="/products"><h3>Vratite se u prodavnicu</h3></Link>
     </div>
       ) : (
         <>
