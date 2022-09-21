@@ -9,7 +9,7 @@ const NavBar = ({cartNum}) => {
       <Link to="/">
         <img className="logo" src={logo} alt="" />
       </Link>
-        <Link to="/products">CoffeeShop</Link>
+        <Link to="/products">Scandinavian Candy</Link>
         <Link to="/cart" className="cart-items">
         <BsFillCartFill className="icon-cart"  />
         <div className="cart-num">{cartNum}</div>

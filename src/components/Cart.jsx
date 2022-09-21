@@ -19,7 +19,7 @@ function Cart({ products, onAdd, onRemove }) {
               />
             )
           )
-        )}
+        )}  
       </div>
       {total === 0 ? (
     <div className="empty">
